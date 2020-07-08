@@ -29,10 +29,12 @@ function makeGrid() {
 
 // add method for the event to occur when button is clicked - resets background color
 document.getElementById("sizePicker").addEventListener('submit', function(event) {
-  event.preventDefault();  // prevent applying color outside grid
+  event.preventDefault();  // prevent reseting grid to 0 when hitting submit - as per default
   makeGrid();
 });
 
 // https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 // https://medium.com/@jacobwarduk/how-to-correctly-use-preventdefault-stoppropagation-or-return-false-on-events-6c4e3f31aedb
 // https://forum.freecodecamp.org/t/addeventlistener-and-changing-background-color/193023/2
+// https://javascript.info/default-browser-action#:~:text=There%20are%20many%20default%20browser,submits%20the%20form%20after%20it.
+// https://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault
